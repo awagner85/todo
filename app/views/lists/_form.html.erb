@@ -1,0 +1,12 @@
+<div>
+  <%= form_for @list do |f| %>
+  <div class='control-group'>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+    <br/>
+  <div class='control-group'>
+    <%= f.submit 'Create List', class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>
