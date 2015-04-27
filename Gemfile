@@ -30,7 +30,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
 gem 'bcrypt', '~> 3.1.7'
+=======
+# gem 'bcrypt', '~> 3.1.7'
+>>>>>>> 62f0cf85eb1c64b8c5d23fabfd6dc6ecdb35b0c6
 
 # Use unicorn as the app server
 # gem 'unicorn'

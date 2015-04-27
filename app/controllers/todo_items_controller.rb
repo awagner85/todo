@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class TodoItemsController < ApplicationController
 
   def create
@@ -21,6 +22,28 @@ class TodoItemsController < ApplicationController
   
   def todo_item_params
     params.require(:todo_item).permit(:completed)
+=======
+class Todo_ItemsController < ApplicationController
+  def index
+  end
+  
+  def show
+  end
+  
+  def new
+  end
+  
+  def create
+  end
+  
+  def edit
+  end
+  
+  def update
+  end
+  
+  def destroy
+>>>>>>> 62f0cf85eb1c64b8c5d23fabfd6dc6ecdb35b0c6
   end
   
 end

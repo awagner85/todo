@@ -8,7 +8,10 @@ Bundler.require(*Rails.groups)
 
 module Todo
   class Application < Rails::Application
+<<<<<<< HEAD
     config.action_view.embed_authenticity_token_in_remote_forms = true
+=======
+>>>>>>> 62f0cf85eb1c64b8c5d23fabfd6dc6ecdb35b0c6
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
