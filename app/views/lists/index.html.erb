@@ -1,0 +1,17 @@
+<% if !logged_in? %>
+  <div class="page-header">
+    <h1>Welcome to Tada! <small>a simple to-do list application</small></h1>
+  </div>
+<% end %>
+
+<% if logged_in? %>
+  <%= link_to 'Create a new list', new_list_path, class: 'btn btn-success' %>
+  <h4>Your lists:</h4>
+  <ul>
+    <% current_user.lists.each do |list| %>
+      <li><%= link_to list.title, list_path(list) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+

@@ -1,0 +1,7 @@
+<% if params[:load_todo_id] %>
+  <script type="text/javascript">
+    $(function(){
+      $('a#todo_item_<%= params[:load_todo_id] %>').click()
+    });
+  </script>
+<% end %>

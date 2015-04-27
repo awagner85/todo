@@ -1,0 +1,39 @@
+<%= link_to 'Back to Lists', lists_path %>
+<br/>
+<br/>
+<%= render 'shared/content_title', title: @list.title %>
+
+<div class='well'>
+  <%= form_for [@list, @todo_item] do |f| %>
+    <%= render 'shared/errors', obj: @todo_item %>
+    <div class='control-group'>
+      <%= f.label :item, 'Add item to list' %>
+      <br/>
+      <%= f.text_field :item %>
+    </div>
+    <br/>
+    <%= f.submit 'Add', class: 'btn btn-success' %>
+  <% end %>
+</div>
+
+<div id='add-item'>
+</div>
+
+
+<div id='checkboxes'>
+  <%= form_tag("/todo_items/complete", :method => "post") do %>
+    <ul class="list-unstyled">
+      <% @list.todo_items.each do |t| %>
+        <% if t.completed == true %>
+          <li style='color:grey;'><%= check_box_tag 'todos_checkbox[]', t.id %><strike><%= t.item %></strike> </li>
+        <% else %>
+          <li><%= check_box_tag 'todos_checkbox[]', t.id %><%= t.item %></li>    
+        <% end %>
+      <% end %>
+    </ul>
+    <br/>
+    <%= submit_tag('Cross Off', class: 'btn btn-success') %>
+  <% end %>
+</div>
+<br/>
+<%= link_to 'Delete List', @list, :method => :delete, :data => {:confirm => 'Are you sure?'} %> 

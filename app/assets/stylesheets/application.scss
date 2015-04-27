@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+body {
+  background-color: #F0F0F0;
+}
+
+.container {
+  margin-left: 135px
+}
+
+.navbar .nav > li > a.brand {
+  padding-left: 0px;
+  color: #DA70D6;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  font-weight: bold;
+}
+
+.navbar .nav > ul > li {
+  float: left;
+}
+
+div .nav_item {
+  margin-left: 25px;
+  float: left;
+}
